@@ -1,11 +1,9 @@
-// Main js
-// Mobile menu toggle
+
 function toggleMenu() {
   const menu = document.getElementById("navMenu");
   menu.classList.toggle("show");
 }
 
-// Smooth scrolling for internal links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -19,12 +17,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Portfolio navigation function
 function navigateToPortfolio(url) {
   window.location.href = url;
 }
 
-// Add loading animation
 window.addEventListener("load", function () {
   document.body.style.opacity = "0";
   document.body.style.transition = "opacity 0.5s ease";
@@ -33,7 +29,6 @@ window.addEventListener("load", function () {
   }, 100);
 });
 
-// Parallax effect for hero section
 window.addEventListener("scroll", function () {
   const scrolled = window.pageYOffset;
   const hero = document.querySelector(".hero");
@@ -42,7 +37,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Interactive member card effects
 document.querySelectorAll(".member-card").forEach((card) => {
   card.addEventListener("mouseenter", function () {
     this.style.transform = "translateY(-10px) scale(1.02)";
@@ -53,7 +47,6 @@ document.querySelectorAll(".member-card").forEach((card) => {
   });
 });
 
-// Close mobile menu when clicking outside
 document.addEventListener("click", function (e) {
   const menu = document.getElementById("navMenu");
   const mobileBtn = document.querySelector(".mobile-menu");
@@ -63,7 +56,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// Dynamic greeting based on time
 function updateGreeting() {
   const hour = new Date().getHours();
   const heroText = document.querySelector(".hero p");
@@ -80,7 +72,6 @@ function updateGreeting() {
   }
 }
 
-// Initialize greeting on page load
 updateGreeting();
 
 // CEIS
@@ -135,13 +126,11 @@ function showProjectDetails(projectName) {
   modal.style.display = "block";
 }
 
-// Toggle projects
 let showingMore = false;
 function toggleProjects() {
   const btn = event.target;
   if (!showingMore) {
     btn.textContent = "Show Less Projects";
-    // Add animation effect
     document.querySelectorAll(".project-card").forEach((card, index) => {
       setTimeout(() => {
         card.style.transform = "scale(1.05)";
@@ -157,7 +146,6 @@ function toggleProjects() {
   }
 }
 
-// Copy to clipboard
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => {
     const modal = document.getElementById("myModal");
@@ -170,7 +158,6 @@ function copyToClipboard(text) {
   });
 }
 
-// Close modal when clicking outside
 window.onclick = function (event) {
   const modal = document.getElementById("myModal");
   if (event.target == modal) {
@@ -178,7 +165,6 @@ window.onclick = function (event) {
   }
 };
 
-// Animate progress bars on scroll
 function animateProgressBars() {
   const progressBars = document.querySelectorAll(".progress-fill");
   progressBars.forEach((bar) => {
@@ -193,12 +179,10 @@ function animateProgressBars() {
   });
 }
 
-// Scroll animations
 window.addEventListener("scroll", () => {
   animateProgressBars();
 });
 
-// Initialize animations on load
 window.addEventListener("load", () => {
   setTimeout(animateProgressBars, 1000);
 });
