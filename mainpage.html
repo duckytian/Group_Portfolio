@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 5 - Digital Innovators</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Group 5</div>
+                <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="ceisPortfolio.html">Sofia Laiza Ceis</a></li>
+                        <li><a href="borjaPortfolio.html">Christian Borja</a></li>
+                        <li><a href="lugoPortfolio.html">Evan Angelo Lugo</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Digital Innovators</h1>
+                <p>Crafting tomorrow's digital experiences today</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="team-section">
+                <h2>Meet Our Team</h2>
+                
+                <div class="team-grid">
+                    <div class="member-card" onclick="navigateToPortfolio('ceisPortfolio.html')">
+                        <div class="member-avatar"><img src="joy.jpg" alt="sofia" class="member-photo"></div>
+                        <h3>Sofia Laiza Ceis</h3>
+                        <div class="member-role">UI/UX Designer</div>
+                        <div class="member-skills">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Adobe XD</span>
+                            <span class="skill-tag">Prototyping</span>
+                            <span class="skill-tag">User Research</span>
+                        </div>
+                        <a href="ceisPortfolio.html" class="portfolio-btn">View Portfolio</a>
+                    </div>
+
+                    <div class="member-card" onclick="navigateToPortfolio('borjaPortfolio.html')">
+                        <div class="member-avatar"><img src="sadness.jpg" alt="christian" class="member-photo"></div>
+                        <h3>Christian Borja</h3>
+                        <div class="member-role">Full-Stack Developer</div>
+                        <div class="member-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                        <a href='borjaPortfolio.html' class="portfolio-btn">View Portfolio</a>
+                    </div>
+
+                    <div class="member-card" onclick="navigateToPortfolio('lugoPortfolio.html')">
+                        <div class="member-avatar"><img src="anger.jpg" alt="Evan" class="member-photo"></div>
+                        <h3>Evan Angelo Lugo</h3>
+                        <div class="member-role">Content Strategist</div>
+                        <div class="member-skills">
+                            <span class="skill-tag">Copywriting</span>
+                            <span class="skill-tag">SEO</span>
+                            <span class="skill-tag">Content Marketing</span>
+                            <span class="skill-tag">Analytics</span>
+                        </div>
+                        <a href='lugoPortfolio.html' class="portfolio-btn">View Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="group-logo">
+                    <div class="logo-circle">G5</div>
+                    <h3 style="margin-top: 1rem; color: #4a5568;">Group 5</h3>
+                    <p style="color: #718096; margin-top: 0.5rem;">Connecting Ideas, Creating Impact</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Group 5. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="mainscript.js"></script>
+</body>
+</html>

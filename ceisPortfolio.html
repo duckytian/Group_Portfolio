@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Laiza Ceis - UI/UX Designer</title>
+    <link rel="stylesheet" href="mainstyle.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="mainpage.html" class="logo">← Group 5</a>
+                <a href="mainpage.html" class="back-btn">Back to Team</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="profile-image"><img src="joy.jpg" alt="Evan" class="profile-photo"></div>
+                <h1>Sofia Laiza Ceis</h1>
+                <p>UI/UX Designer & Creative Visionary</p>
+                <button class="interactive-btn" onclick="showGreeting()">Say Hello! 👋</button>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="content-section">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card" onclick="animateSkill(this)">
+                        <div class="skill-icon">🎯</div>
+                        <h3>User Research</h3>
+                        <p>Understanding user needs through interviews, surveys, and usability testing</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" onclick="animateSkill(this)">
+                        <div class="skill-icon">✏️</div>
+                        <h3>Wireframing</h3>
+                        <p>Creating detailed wireframes and prototypes for seamless user experiences</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" onclick="animateSkill(this)">
+                        <div class="skill-icon">🎨</div>
+                        <h3>Visual Design</h3>
+                        <p>Crafting beautiful, functional interfaces with attention to detail</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" onclick="animateSkill(this)">
+                        <div class="skill-icon">⚡</div>
+                        <h3>Prototyping</h3>
+                        <p>Building interactive prototypes to test and validate design concepts</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" onclick="showProjectDetails('E-Commerce App')">
+                        <div class="project-image">🛍️</div>
+                        <div class="project-content">
+                            <h3>E-Commerce Mobile App</h3>
+                            <p>Redesigned shopping experience with intuitive navigation and seamless checkout process.
+                                Increased user engagement by 40%.</p>
+                            <div class="project-tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">User Testing</span>
+                                <span class="tag">Mobile Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" onclick="showProjectDetails('Dashboard Design')">
+                        <div class="project-image">📊</div>
+                        <div class="project-content">
+                            <h3>Analytics Dashboard</h3>
+                            <p>Clean, data-driven dashboard design for business intelligence. Improved data
+                                comprehension by 60%.</p>
+                            <div class="project-tags">
+                                <span class="tag">Data Viz</span>
+                                <span class="tag">Adobe XD</span>
+                                <span class="tag">UI Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" onclick="showProjectDetails('Brand Identity')">
+                        <div class="project-image">🎭</div>
+                        <div class="project-content">
+                            <h3>Brand Identity System</h3>
+                            <p>Complete brand redesign including logo, color palette, and design system for a tech
+                                startup.</p>
+                            <div class="project-tags">
+                                <span class="tag">Branding</span>
+                                <span class="tag">Logo Design</span>
+                                <span class="tag">Style Guide</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="interactive-btn" onclick="toggleProjects()">Show More Projects</button>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-info">
+                    <div class="contact-card" onclick="copyToClipboard('sofialaiza.ceis@cvsu.edu.ph')">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>sofialaiza.ceis@cvsu.edu.ph</p>
+                        <small>Click to copy</small>
+                    </div>
+                    <div class="contact-card" onclick="window.open('https://linkedin.com', '_blank')">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally</p>
+                        <small>Click to visit</small>
+                    </div>
+                    <div class="contact-card" onclick="window.open('https://dribbble.com', '_blank')">
+                        <div class="contact-icon">🎨</div>
+                        <h3>Dribbble</h3>
+                        <p>View my design portfolio</p>
+                        <small>Click to visit</small>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Hello there! 👋</h2>
+            <p id="modalText">Thanks for visiting my portfolio! I'm passionate about creating user-centered designs that
+                make a difference.</p>
+        </div>
+    </div>
+    <script src="mainscript.js"></script>
+</body>
+
+</html>
