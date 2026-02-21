@@ -233,10 +233,7 @@ function showPortfolioDetails(projectName) {
   const projectDetails = {
     "Tech Startup":
       "This SaaS company needed to establish thought leadership in their industry. We created a content strategy focused on educational blog posts, case studies, and interactive content that positioned them as industry experts.",
-    "E-commerce Brand":
-      "A fashion retailer wanted to stand out in a crowded market. We developed a unique brand voice that was authentic, engaging, and perfectly aligned with their target demographic's values and aspirations.",
-    "Non-profit Campaign":
-      "This environmental organization needed to raise awareness and funds for their conservation efforts. We created an emotional storytelling campaign that connected donors to the impact of their contributions.",
+    
   };
 
   title.textContent = projectName + " Case Study";
